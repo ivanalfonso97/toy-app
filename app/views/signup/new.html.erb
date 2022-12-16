@@ -1,0 +1,63 @@
+<div class="container">
+<div class="row d-flex justify-content-center mt-4">
+<div class="col-8 ">
+    <div class="row">
+        <h1 class="col mb-4 offset-3">Sign Up</h1>
+    </div>
+    <%= form_with model: @user, url: signup_path do |form| %>
+        <div class="row align-items-center mb-3">
+            <%= render partial: "shared/signup_error" %>
+        </div>
+        <div class="row align-items-center mb-3">
+            <div class="col-2 offset-3">
+                <%= form.label :name %>
+            </div>
+            <div class="col-4 pe-0">
+                <%= form.text_field :name, class: "form-control", placeholder: "John Doe" %>
+            </div>
+            <div class="col-3 ps-4">
+                <span class="form-text"></span>
+            </div>
+        </div>
+        <div class="row align-items-center mb-3">
+            <div class="col-2 offset-3">
+                <%= form.label :email %>
+            </div>
+            <div class="col-4 pe-0">
+                <%= form.text_field :email, class: "form-control", placeholder: "john@email.com" %>
+            </div>
+            <div class="col-3 ps-4">
+                <span class="form-text"></span>
+            </div>
+        </div>
+        <div class="row align-items-center mb-3">
+            <div class="col-2 offset-3">
+                <%= form.label :password %>
+            </div>
+            <div class="col-4 pe-0">
+                <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
+            </div>
+            <div class="col-3 ps-4">
+                <span class="form-text">Must more than 6 characters long.</span>
+            </div>
+        </div>
+        <div class="row align-items-center mb-3">
+            <div class="col-2 offset-3">
+                <%= form.label :password_confirmation %>
+            </div>
+            <div class="col-4 pe-0">
+                <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Comfirm Password" %>
+            </div>
+            <div class="col-3 ps-4">
+                <span class="form-text"></span>
+            </div>
+        </div>
+
+        <div class="row mt-4 justify-content-end">
+            <%= form.submit "Sign Up", class: "col-2 btn btn-primary" %>
+            <div class="col-3"></div>
+        </div>
+    <% end %>
+</div>
+</div>
+</div>
