@@ -1,0 +1,12 @@
+<div class="d-flex flex-column w-50 my-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3><%= toy.toy_name %></h3>
+        <% if current_page?(dashboard_path) %>
+            <%= link_to "Edit Toy", edit_toy_path(toy) %>
+        <% end %>
+    </div>
+    
+    <p class="fw-light fst-italic"><%= toy.category %></p>
+    <%= toy.description %>
+    <p class="fw-light mt-4">Added by: <span class="fw-semibold"><%= toy.user.name %></span></p>
+</div>

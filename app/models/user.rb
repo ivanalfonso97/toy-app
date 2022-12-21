@@ -4,6 +4,8 @@
 # password_confirmation: string virtual
 
 class User < ApplicationRecord
+    has_many :toys
+    
     has_secure_password
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

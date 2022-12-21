@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post "/signin", to: "sessions#create"
   delete "/signout", to: "sessions#destroy"
 
+  resources :toys
+  get "/dashboard", to: "toys#dashboard"
+
   get "/about", to: "about#index"
   
 end

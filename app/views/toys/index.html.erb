@@ -1,11 +1,12 @@
 <div class="container">
     <div class="row d-flex flex-column align-items-center">
         <div class="d-flex align-items-center justify-content-between w-50 my-4">
-            <h1>About the Toy App</h1>
+            <h1>Toys</h1>
+            <%= link_to "List a Toy", new_toy_path, class: "btn btn-primary" %>
         </div>
         <hr class="w-50">
     </div>
     <div class="row d-flex flex-column align-items-center">
-        <p class="col-6 p-0">This app was brought to you by Ivan Chan, through a project by the Gorated Internship Program.</p>
+        <%= render @toys %>
     </div>
 </div>

@@ -6,7 +6,7 @@
     </div>
     <%= form_with model: @user, url: signup_path do |form| %>
         <div class="row align-items-center mb-3">
-            <%= render partial: "shared/signup_error" %>
+            <%= render "shared/form_error", form: form %>
         </div>
         <div class="row align-items-center mb-3">
             <div class="col-2 offset-3">
