@@ -29,6 +29,14 @@
             <%= form.text_area :description, class: "form-control", placeholder: "About your toy..." %>
         </div>
     </div>
+    <div class="row align-items-center mb-3">
+        <div class="col-2 offset-3">
+            <%= form.label :image %>
+        </div>
+        <div class="col-4 pe-0">
+            <%= form.file_field :image, class: "form-control" %>
+        </div>
+    </div>
     <div class="row mt-4 justify-content-end">
         <%= form.submit "List", class: "col-2 btn btn-primary" %>
         <div class="col-3"></div>
