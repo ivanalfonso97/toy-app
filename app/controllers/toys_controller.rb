@@ -16,7 +16,7 @@ class ToysController < ApplicationController
 
     def create
         @toy = Current.user.toys.new(params_toy)
-        @toy.image.attach(params[:toy][:image])
+        @toy.images.attach(params[:images])
         if @toy.save
             redirect_to toys_path, notice: "Toy has been listed"
         else
