@@ -1,6 +1,7 @@
 class Toy < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  has_many_attached :images
 
   validates :toy_name, presence: true
   validates :description, length: { maximum: 400 }

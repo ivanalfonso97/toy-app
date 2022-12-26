@@ -31,10 +31,10 @@
     </div>
     <div class="row align-items-center mb-3">
         <div class="col-2 offset-3">
-            <%= form.label :image %>
+            <%= form.label :images %>
         </div>
         <div class="col-4 pe-0">
-            <%= form.file_field :image, class: "form-control" %>
+            <%= form.file_field :images, multiple: true, class: "form-control" %>
         </div>
     </div>
     <div class="row mt-4 justify-content-end">
